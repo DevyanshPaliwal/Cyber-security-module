@@ -7,7 +7,11 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: button_1
+    properties: {text: SingUp, bold: true, background: 'theme:Primary Container', foreground: 'theme:On Tertiary Container'}
+    type: Button
+    layout_properties: {grid_position: 'DYRULO,NLWMJK'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
