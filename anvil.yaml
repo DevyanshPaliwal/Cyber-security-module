@@ -14,14 +14,14 @@ services:
   client_config: {}
   server_config: {}
 db_schema:
-  table_1:
+  data:
     client: none
     server: full
     columns:
-    - name: Email
-      admin_ui: {width: 200, order: 0}
+    - name: email
+      admin_ui: {order: 0, width: 200}
       type: string
-    - name: Password
-      admin_ui: {width: 200, order: 1}
+    - name: password
+      admin_ui: {order: 1, width: 200}
       type: number
-    title: Table 1
+    title: data

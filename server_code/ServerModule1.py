@@ -18,7 +18,7 @@ import anvil.server
 
 @anvil.server.callable
 def submit(email,password):
-  app_tables.Table1.add_row(Email=email, Password=password)
+  app_tables.data.add_row(email=email, password=password)
   
   
   

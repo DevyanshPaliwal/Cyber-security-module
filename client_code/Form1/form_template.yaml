@@ -1,15 +1,37 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', wrap_on: tablet, spacing_above: medium, spacing_below: medium, col_spacing: small}
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: button_1
-    properties: {text: SingUp, bold: true, background: 'theme:Primary Container', foreground: 'theme:On Tertiary Container'}
-    type: Button
-    layout_properties: {grid_position: 'DYRULO,NLWMJK'}
-    event_bindings: {click: button_1_click}
+  - name: label_1
+    properties: {text: SignUp, foreground: 'theme:Primary Container', bold: true, font_size: 25, underline: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'AVASUW,ENAUNX'}
+  - name: linear_panel_1
+    properties: {background: 'theme:On Primary'}
+    type: LinearPanel
+    layout_properties: {grid_position: 'XFADBV,MLWVCN'}
+    components:
+    - name: label_2
+      properties: {text: ' Email:', bold: true, font_size: 16}
+      type: Label
+      layout_properties: {}
+    - name: text_box_1
+      properties: {text: ' '}
+      type: TextBox
+    - name: label_3
+      properties: {text: ' Password:', bold: true, font_size: 16}
+      type: Label
+      layout_properties: {}
+    - name: text_box_2
+      properties: {text: ' '}
+      type: TextBox
+    - name: button_1
+      properties: {text: SignUp, bold: true, background: 'theme:Outline', foreground: 'theme:On Primary'}
+      type: Button
+      event_bindings: {click: button_1_click}

@@ -15,8 +15,8 @@ class Form1(Form1Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    email = self.email.text
-    password = self.password.text
-    anvil.server.call('submit', Email = email, password = password)
+    email = self.text_box_1.text
+    password = int(self.text_box_2.text)
+    anvil.server.call('submit', email=email, password=password)
     Notification("Signed In successfully").show()
 
