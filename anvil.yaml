@@ -13,3 +13,15 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+db_schema:
+  table_1:
+    client: none
+    server: full
+    columns:
+    - name: Email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Password
+      admin_ui: {width: 200, order: 1}
+      type: number
+    title: Table 1
