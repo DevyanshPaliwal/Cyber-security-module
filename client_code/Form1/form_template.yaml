@@ -13,7 +13,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'AVASUW,ENAUNX'}
   - name: linear_panel_1
-    properties: {background: 'theme:On Primary'}
+    properties: {background: 'theme:On Primary', spacing_below: none}
     type: LinearPanel
     layout_properties: {grid_position: 'XFADBV,MLWVCN'}
     components:
@@ -29,9 +29,13 @@ components:
       type: Label
       layout_properties: {}
     - name: text_box_2
-      properties: {text: ' '}
+      properties: {text: ' ', hide_text: true}
       type: TextBox
     - name: button_1
       properties: {text: SignUp, bold: true, background: 'theme:Outline', foreground: 'theme:On Primary'}
       type: Button
       event_bindings: {click: button_1_click}
+    - name: spacer_1
+      properties: {height: 0.199981689453125}
+      type: Spacer
+      layout_properties: {}
