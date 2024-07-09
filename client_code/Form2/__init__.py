@@ -17,6 +17,6 @@ class Form2(Form2Template):
     """This method is called when the button is clicked"""
     mail = self.text_box_1.text
     pwd = self.text_box_2.text
-    if mail == app_tables.data.search(mail) and pwd == app_tables.data.search(pwd):
-      
-      
+    anvil.server.call('action', mail=mail, pwd=pwd)
+    Notification("Security email sent to the respective account.").show()
+    

@@ -19,4 +19,6 @@ class Form1(Form1Template):
     password = int(self.text_box_2.text)
     anvil.server.call('submit', email=email, password=password)
     Notification("Signed In successfully").show()
+    open_form('Form2')
+    
 
