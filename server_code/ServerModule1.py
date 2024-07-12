@@ -4,19 +4,6 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.email
 
-# This is a server module. It runs on the Anvil server,
-# rather than in the user's browser.
-#
-# To allow anvil.server.call() to call functions here, we mark
-# them with @anvil.server.callable.
-# Here is an example - you can replace it with your own:
-#
-# @anvil.server.callable
-# def say_hello(name):
-#   print("Hello, " + name + "!")
-#   return 42
-#
-
 @anvil.server.callable
 def submit(email,password):
   app_tables.data.add_row(email=email, password=password)
@@ -37,6 +24,7 @@ def get_p(x):
 def action(mail, pwd):
   if mail == get_e(mail) and pwd == get_p(pwd):
       anvil.email.send(to=mail , subject = "Login alert", text = "Your accound has been successfuly logged in. If not done by you please take nessary actions and change your password.")
+    
   else:
       anvil.email.send(to=mail , subject = "Login alert", text ="Some one is trying to log into your accound. Please secure your account. If intended by you trying entering correct password.")
     

