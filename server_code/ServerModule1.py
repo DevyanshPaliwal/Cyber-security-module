@@ -19,7 +19,6 @@ def get_p(x):
       emails = [user['password'] for user in usr]
       return emails
 
-
 @anvil.server.callable
 def action(mail, pwd):
   if mail == get_e(mail) and pwd == get_p(pwd):

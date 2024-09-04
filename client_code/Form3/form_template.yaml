@@ -1,5 +1,5 @@
+components: []
 container:
-  type: HtmlTemplate
   properties:
     html: |
       <!DOCTYPE html>
@@ -33,5 +33,5 @@ container:
           </div>
       </body>
       </html>
-components: []
+  type: HtmlTemplate
 is_package: true
