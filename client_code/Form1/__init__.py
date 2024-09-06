@@ -20,5 +20,9 @@ class Form1(Form1Template):
     anvil.server.call('submit', email=email, password=password)
     Notification("Signed In successfully").show()
     open_form('Form2')
+
+  def text_box_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
     
 
